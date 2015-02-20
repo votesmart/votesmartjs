@@ -2,7 +2,8 @@ describe("VoteSmartJS API Frontend Tests", function () {
   var votesmart;
 
   before(function (done) {
-    votesmart = new VoteSmart();
+    VoteSmart = require('../../lib/votesmart');
+    votesmart = new VoteSmart('bcfa5d8cf0b12d203e7630fa474ade79');
     done();
   });
 
@@ -10,39 +11,24 @@ describe("VoteSmartJS API Frontend Tests", function () {
     it("GET Address().campaign", function (done) {
       var query = { "candidateId": "3118" };
       votesmart.Address().campaign(query, function (err, res) {
-        if (err.error.errorMessage ===
-          "Campaign address no longer available or candidate does not exist.") {
-          done();
-        }
-        else {
-          throw err;
-        }
+        if (err) throw err;
+        done();
       })
     });
 
     it("GET Address().campaignWebAddress", function (done) {
       var query = { "candidateId": "16886" };
       votesmart.Address().campaignWebAddress(query, function (err, res) {
-        if (err.error.errorMessage ===
-          "Campaign Web address no longer available or candidate does not exist.") {
-          done();
-        }
-        else {
-          throw err;
-        }
+        if (err) throw err;
+        done();
       })
     });
 
     it("GET Address().campaignByElection", function (done) {
       var query = { "electionId": "2012" };
       votesmart.Address().campaignByElection(query, function (err, res) {
-        if (err.error.errorMessage ===
-          "Campaign address no longer available or candidates do not exist.") {
-          done();
-        }
-        else {
-          throw err;
-        }
+        if (err) throw err;
+        done();
       })
     });
 
