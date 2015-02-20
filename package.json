@@ -1,0 +1,28 @@
+{
+  "name": "votesmartjs",
+  "version": "0.0.1",
+  "description": "JavaScript wrapper around Vote Smart's REST API",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votesmart/votesmartjs.git"
+  },
+  "owner": "Vote Smart",
+  "author": "Adrian Sonnenschein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/votesmart/votesmartjs/issues"
+  },
+  "homepage": "https://github.com/votesmart/votesmartjs",
+  "dependencies": {
+    "express": "4.10.7",
+    "nodemon": "1.2.1",
+    "request": "2.51.0"
+  }
+}
