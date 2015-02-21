@@ -3,7 +3,7 @@ describe("VoteSmartJS API Frontend Tests", function () {
 
   before(function (done) {
     VoteSmart = require('../../lib/votesmart');
-    votesmart = new VoteSmart('bcfa5d8cf0b12d203e7630fa474ade79');
+    votesmart = new VoteSmart('API_KEY');
     done();
   });
 
