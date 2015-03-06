@@ -60,6 +60,7 @@ load **votesmart.js** into your application as a regular JavaScript file:
 
 ###### GET campaign()
 Grab campaign office(s) and basic candidate information for the specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -75,6 +76,7 @@ votesmart.Address().campaign(query, function (err, res) {
 ```
 ###### GET campaignWebAddress()
 Grab campaign office's web address(es) and basic candidate information for the specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -90,6 +92,7 @@ votesmart.Address().campaignWebAddress(query, function (err, res) {
 ```
 ###### GET campaignByElection()
 Grab campaign office(s) and basic candidate information for the specified election.
+
 **Input:**
 * electionId
 ```
@@ -105,6 +108,7 @@ votesmart.Address().campaignByElection(query, function (err, res) {
 ```
 ###### GET office()
 Grab office(s) and basic candidate information for the specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -120,6 +124,7 @@ votesmart.Address().office(query, function (err, res) {
 ```
 ###### GET officeWebAddress()
 Grab office's web address(es) and basic candidate information for the specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -135,6 +140,7 @@ votesmart.Address().officeWebAddress(query, function (err, res) {
 ```
 ###### GET officeByOfficeState()
 Grab office address and basic candidate information according to the officeId and state.
+
 **Input:**
 * officeId
 * stateId `optional`
@@ -156,6 +162,7 @@ votesmart.Address().officeByOfficeState(query, function (err, res) {
 
 ###### GET measuresByYearState()
 Return a list of state ballot measures in a given year.
+
 **Input:**
 * year
 * stateId
@@ -173,6 +180,7 @@ votesmart.BallotMeasure().measuresByYearState(query, function (err, res) {
 ```
 ###### GET measure()
 Return a single ballot measure in detail.
+
 **Input:**
 * measureId
 ```
@@ -192,6 +200,7 @@ votesmart.BallotMeasure().measure(query, function (err, res) {
 
 ###### GET bio()
 Grab the main bio for specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -207,6 +216,7 @@ votesmart.CanidateBio().bio(query, function (err, res) {
 ```
 ###### GET detailedBio()
 Expands on GET bio() by adding elements for education, profession, political, orgMembership and congMembership.
+
 **Input:**
 * candidateId
 ```
@@ -222,6 +232,7 @@ votesmart.CanidateBio().detailedBio(query, function (err, res) {
 ```
 ###### GET additionalBio()
 Grab extended bio for specified candidate.
+
 **Input:**
 * candidateId
 ```
@@ -241,6 +252,7 @@ votesmart.CanidateBio().additionalBio(query, function (err, res) {
 
 ###### GET byOfficeState()
 Grab a list of candidates according to office and state representation.
+
 **Input:**
 * officeId
 * stateId `optional`
@@ -261,6 +273,7 @@ votesmart.Canidates().byOfficeState(query, function (err, res) {
 ```
 ###### GET byOfficeTypeState()
 Grab a list of candidates according to office type and state representation.
+
 **Input:**
 * officeTypeId
 * stateId `optional`
@@ -281,6 +294,7 @@ votesmart.Canidates().byOfficeTypeState(query, function (err, res) {
 ```
 ###### GET byLastName()
 Grab a list of candidates according to lastname match.
+
 **Input:**
 * lastName
 * electionYear `optional`
@@ -299,6 +313,7 @@ votesmart.Canidates().byLastName(query, function (err, res) {
 ```
 ###### GET byLevenshtein()
 Grad a list of candidates according to a fuzzy lastname math.
+
 **Input:**
 * lastName
 * electionYear `optional`
@@ -317,6 +332,7 @@ votesmart.Canidates().byLevenshtein(query, function (err, res) {
 ```
 ###### GET byElection()
 Grab a list of candidates according to the election they are running in.
+
 **Input:**
 * electionId
 * stageId `optional`
@@ -334,6 +350,7 @@ votesmart.Canidates().byElection(query, function (err, res) {
 ```
 ###### GET byDistrict()
 Grab a list of candidates according to the district they represent.
+
 **Input:**
 * districtId
 * electionYear `optional`
@@ -352,6 +369,7 @@ votesmart.Canidates().byDistrict(query, function (err, res) {
 ```
 ###### GET byZip()
 Grab a list of candidates according to the zip code they represent.
+
 **Input:**
 * zip5
 * electionYear `optional`
@@ -375,6 +393,7 @@ votesmart.Canidates().byZip(query, function (err, res) {
 
 ###### GET types()
 Return committee types (house, senate, joint, etc).
+
 **Input:**
 * None
 ```
@@ -387,6 +406,7 @@ votesmart.Committee().types(function (err, res) {
 ```
 ###### GET byTypeState()
 Return list of committees that fit query criteria.
+
 **Input:**
 * typeId `optional`
 * stateId `optional`
@@ -404,6 +424,7 @@ votesmart.Committee().byTypeState(query, function (err, res) {
 ```
 ###### GET committee()
 Return detailed committee data.
+
 **Input:**
 * committeeId
 ```
@@ -419,6 +440,7 @@ votesmart.Committee().committee(query, function (err, res) {
 ```
 ###### GET committeeMembers()
 Return members of the committee.
+
 **Input:**
 * committeeId
 ```
@@ -438,6 +460,7 @@ votesmart.Committee().committeeMembers(query, function (err, res) {
 
 ###### GET byOfficeState()
 Grab district IDs by officeId and stateId.
+
 **Input:**
 * officeId
 * stateId
@@ -457,6 +480,7 @@ votesmart.District().byOfficeState(query, function (err, res) {
 ```
 ###### GET byZip()
 Grab district IDs by zip5.
+
 **Input:**
 * zip5
 * zip4 `optional`
@@ -477,6 +501,7 @@ votesmart.District().byZip(query, function (err, res) {
 
 ###### GET election()
 Grab basic district election data by electionId.
+
 **Input:**
 * electionId
 ```
@@ -492,6 +517,7 @@ votesmart.Election().election(query, function (err, res) {
 ```
 ###### GET electionByYearState()
 Grab basic district election data by year and stateId.
+
 **Input:**
 * year
 * stateId `optional`
@@ -509,6 +535,7 @@ votesmart.Election().electionByYearState(query, function (err, res) {
 ```
 ###### GET electionByZip()
 Grab basic district election data by zip5.
+
 **Input:**
 * zip5
 * zip4 `optional`
@@ -527,6 +554,7 @@ votesmart.Election().electionByZip(query, function (err, res) {
 ```
 ###### GET stageCandidates()
 Grab basic district eleciton data by electionId and stageId.
+
 **Input:**
 * electionId
 * stageId
@@ -552,6 +580,7 @@ votesmart.Election().stageCandidates(query, function (err, res) {
 
 ###### GET positions()
 Grab leadership positions by stateId and officeId
+
 **Input:**
 * stateId `optional`
 * officeId `optional`
@@ -568,6 +597,7 @@ votesmart.Leadership().positions(query, function (err, res) {
 ```
 ###### GET officials()
 Grab officials that hold the leadership role in certain states.
+
 **Input:**
 * leadershipId
 * stateId `optional`
@@ -589,6 +619,7 @@ votesmart.Leadership().officials(query, function (err, res) {
 
 ###### GET counties()
 Grab counties by stateId.
+
 **Input:**
 * stateId
 ```
@@ -604,6 +635,7 @@ votesmart.Local().counties(query, function (err, res) {
 ```
 ###### GET cities()
 Grab cities by stateId.
+
 **Input:**
 * stateId
 ```
@@ -619,6 +651,7 @@ votesmart.Local().cities(query, function (err, res) {
 ```
 ###### GET officials()
 Grab official by locality.
+
 **Input:**
 * localId
 ```
@@ -638,6 +671,7 @@ votesmart.Local().officials(query, function (err, res) {
 
 ###### GET npat()
 Grab a candidate's most recently filled out NPAT/PCT.
+
 **Input:**
 * candidateId
 ```
@@ -657,6 +691,7 @@ votesmart.Npat().npat(query, function (err, res) {
 
 ###### GET types()
 Grab all office types.
+
 **Input:**
 * None
 ```
@@ -669,6 +704,7 @@ votesmart.Office().types(function (err, res) {
 ```
 ###### GET branches()
 Grab all of the branches of government and their IDs.
+
 **Input:**
 * None
 ```
@@ -680,7 +716,8 @@ votesmart.Office().branches(function (err, res) {
 });
 ```
 ###### GET levels()
-Grad all of the levels of government and their IDs.
+Grab all of the levels of government and their IDs.
+
 **Input:**
 * None
 ```
@@ -693,6 +730,7 @@ votesmart.Office().levels(function (err, res) {
 ```
 ###### GET officesByType()
 Grab offices by officeTypeId.
+
 **Input:**
 * officeTypeId
 ```
@@ -708,6 +746,7 @@ votesmart.Office().officesByType(query, function (err, res) {
 ```
 ###### GET officesByLevel()
 Grab offices by levelId.
+
 **Input:**
 * levelId
 ```
@@ -723,6 +762,7 @@ votesmart.Office().officesByTypeLevel(query, function (err, res) {
 ```
 ###### GET officesByTypeLevel()
 Grab offices by officeTypeId and officeLevelId.
+
 **Input:**
 * officeTypeId
 * officeLevelId
@@ -740,6 +780,7 @@ votesmart.Office().officesByTypeLevel(query, function (err, res) {
 ```
 ###### GET officesByBranchLevel()
 Grab offices by branchId and levelId.
+
 **Input:**
 * officeBranchId
 * officeLevelId
@@ -761,6 +802,7 @@ votesmart.Office().officesByBranchLevel(query, function (err, res) {
 
 ###### GET statewide()
 Grab a list of officials by stateId.
+
 **Input:**
 * stateId
 ```
@@ -776,6 +818,7 @@ votesmart.Officials().statewide(query, function (err, res) {
 ```
 ###### GET byOfficeState()
 Grab a list of officials according to officeId and stateId.
+
 **Input:**
 * officeId
 * stateId `optional`
@@ -793,6 +836,7 @@ votesmart.Officials().byOfficeState(query, function (err, res) {
 ```
 ###### GET byOfficeTypeState()
 Grab a list of officials according to officeTypeId and stateId.
+
 **Input:**
 * officeTypeId
 * stateId `optional`
@@ -810,6 +854,7 @@ votesmart.Officials().byOfficeTypeState(query, function (err, res) {
 ```
 ###### GET byLastName()
 Grab a list of officials by lastName.
+
 **Input:**
 * lastName
 ```
@@ -825,6 +870,7 @@ votesmart.Officials().byLastName(query, function (err, res) {
 ```
 ###### GET byLevenshtein()
 Grab a list of officials by a fuzzy lastName match.
+
 **Input:**
 * lastName
 ```
@@ -840,6 +886,7 @@ votesmart.Officials().byLevenshtein(query, function (err, res) {
 ```
 ###### GET byDistrict()
 Grab a list of officials by the districtId they are running for.
+
 **Input:**
 * districtId
 ```
@@ -855,6 +902,7 @@ votesmart.Officials().byDistrict(query, function (err, res) {
 ```
 ###### GET byZip()
 Grab a list of officials by the zip5 they represent.
+
 **Input:**
 * zip5
 * zip4 `optional`
@@ -875,6 +923,7 @@ votesmart.Officials().byZip(query, function (err, res) {
 
 ###### GET categories()
 Grab categories that contain released ratings by stateId.
+
 **Input:**
 * stateId
 ```
@@ -890,6 +939,7 @@ votesmart.Rating().categories(query, function (err, res) {
 ```
 ###### GET sigList()
 Grab special interest groups by categoryId and stateId.
+
 **Input:**
 * categoryId
 * stateId `optional`
@@ -907,6 +957,7 @@ votesmart.Rating().sigList(query, function (err, res) {
 ```
 ###### GET sig()
 Grab detailed information for a special interest group.
+
 **Input:**
 * sigId
 ```
@@ -922,6 +973,7 @@ votesmart.Rating().sig(query, function (err, res) {
 ```
 ###### GET sigRatings()
 Grab all ratings for a special interest group.
+
 **Input:**
 * sigId
 ```
@@ -937,6 +989,7 @@ votesmart.Rating().sigRatings(query, function (err, res) {
 ```
 ###### GET candidateRating()
 Grab a candidate's rating by a special interest group.
+
 **Input:**
 * candidateId
 * sigId `optional`
@@ -954,6 +1007,7 @@ votesmart.Rating().candidateRating(query, function (err, res) {
 ```
 ###### GET rating()
 Grab all candidate ratings from a scorecard by a special interest group.
+
 **Input:**
 * ratingId
 ```
@@ -973,6 +1027,7 @@ votesmart.Rating().rating(query, function (err, res) {
 
 ###### GET stateIds()
 Grab a list of state IDs and names.
+
 **Input:**
 * None
 ```
@@ -985,6 +1040,7 @@ votesmart.State().stateIds(function (err, res) {
 ```
 ###### GET state()
 Grab various data about a state by stateId.
+
 **Input:**
 * stateId
 ```
@@ -1004,6 +1060,7 @@ votesmart.State().state(query, function (err, res) {
 
 ###### GET categories()
 Grab categories that contain released bills according to year and stateId.
+
 **Input:**
 * year
 * stateId `optional`
@@ -1021,6 +1078,7 @@ votesmart.Votes().categories(query, function (err, res) {
 ```
 ###### GET bill()
 Grab general information about a bill.
+
 **Input:**
 * billId
 ```
@@ -1036,6 +1094,7 @@ votesmart.Votes().bill(query, function (err, res) {
 ```
 ###### GET billAction()
 Grab detailed action information on a certain stage of a bill.
+
 **Input:**
 * actionId
 ```
@@ -1051,6 +1110,7 @@ votesmart.Votes().billAction(query, function (err, res) {
 ```
 ###### GET billActionVotes()
 Grab votes listed by a candidate on a certain bill action.
+
 **Input:**
 * actionId
 ```
@@ -1066,6 +1126,7 @@ votesmart.Votes().billActionVotes(query, function (err, res) {
 ```
 ###### GET billActionVoteByOfficial()
 Grab a single vote by actionId and candidateId.
+
 **Input:**
 * actionId
 * candidateId
@@ -1083,6 +1144,7 @@ votesmart.Votes().billActionVoteByOfficial(query, function (err, res) {
 ```
 ###### GET byBillNumber()
 Grab a list of bills according to billNumber.
+
 **Input:**
 * billNumber
 ```
@@ -1098,6 +1160,7 @@ votesmart.Votes().byBillNumber(query, function (err, res) {
 ```
 ###### GET billsByCategoryYearState()
 Grab a list of bills by categoryId, year and stateId.
+
 **Input:**
 * categoryId
 * year
@@ -1117,6 +1180,7 @@ votesmart.Votes().billsByCategoryYearState(query, function (err, res) {
 ```
 ###### GET billsByYearState()
 Grab a list of bills by year and stateId.
+
 **Input:**
 * year
 * stateId `optional`
@@ -1134,6 +1198,7 @@ votesmart.Votes().billsByYearState(query, function (err, res) {
 ```
 ###### GET billsByOfficialYearOffice()
 Grab a list of bills by candidateId, year and officeId.
+
 **Input:**
 * candidateId
 * year
@@ -1153,6 +1218,7 @@ votesmart.Votes().billsByOfficialYearOffice(query, function (err, res) {
 ```
 ###### GET billsByOfficialCategoryOffice()
 Grab a list of bills by candidateId, categoryId and officeId.
+
 **Input:**
 * candidateId
 * categoryId
@@ -1174,6 +1240,7 @@ votesmart.Votes().billsByOfficialCategoryOffice(query, function (err, res) {
 ```
 ###### GET byOfficial()
 Grab all the bills an official has voted on by candidateId, officeId, categoryId and year.
+
 **Input:**
 * candidateId
 * officeId `optional`
@@ -1195,6 +1262,7 @@ votesmart.Votes().byOfficial(query, function (err, res) {
 ```
 ###### GET billsBySponsorYear()
 Grab a list of bills that fit a sponsor's candidateId and year.
+
 **Input:**
 * candidateId
 * year
@@ -1212,6 +1280,7 @@ votesmart.Votes().billsBySponsorYear(query, function (err, res) {
 ```
 ###### GET billsBySponsorCategory()
 Grab a list of bills that fit a sponsor's candidateId and category.
+
 **Input:**
 * candidateId
 * categoryId
@@ -1229,6 +1298,7 @@ votesmart.Votes().billsBySponsorCategory(query, function (err, res) {
 ```
 ###### GET billsByStateRecent()
 Grab a list of bills by stateId.  Max returned is 100 or however much less you specify.
+
 **Input:**
 * amount `optional - default: 100, max: 100`
 * stateId `optional - default "NA"`
@@ -1246,6 +1316,7 @@ votesmart.Votes().billsByStateRecent(query, function (err, res) {
 ```
 ###### GET vetoes()
 Grab a list of vetoes by candidateId.
+
 **Input:**
 * candidateId
 ```
