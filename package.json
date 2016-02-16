@@ -4,7 +4,7 @@
   "main": "lib/votesmart.js",
   "description": "JavaScript wrapper around Vote Smart's REST API",
   "scripts": {
-    "test": "mocha ./tests/backend"
+    "test": "mocha ./tests"
   },
   "repository": {
     "type": "git",
