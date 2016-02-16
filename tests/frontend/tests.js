@@ -55,7 +55,7 @@ describe("VoteSmartJS API Frontend Tests", function () {
 
   describe("Bill Module Tests", function () {
     it("GET Bill().bill", function (done) {
-      var query = { billnumber: "H 1", state__state_id: "NA", yearintroduced: 2015 };
+      var query = { billnumber: "HR 123", state__state_id: "NA", yearintroduced: 2015 };
       votesmart.Bill().bill(query, function (err, res) {
         if (err) { throw err; }
         done();
@@ -126,9 +126,9 @@ describe("VoteSmartJS API Frontend Tests", function () {
   });
 
   describe("PCT Module Tests", function () {
-    it("GET PCT().form", function (done) {
+    it("GET PCT().schema", function (done) {
       var query = { elections__officetype__officetype_id: "C", elections__state__state_id: "CA", elections__year: 2014 };
-      votesmart.PCT().form(query, function (err, res) {
+      votesmart.PCT().schema(query, function (err, res) {
         if (err) { throw err; }
         done();
       })
@@ -141,7 +141,7 @@ describe("VoteSmartJS API Frontend Tests", function () {
       })
     });
     it("GET PCT().politician", function (done) {
-      var query = { politician_id: 9490 };
+      var query = { politicians__politician_id: 9490 };
       votesmart.PCT().politician(query, function (err, res) {
         if (err) { throw err; }
         done();
@@ -158,7 +158,7 @@ describe("VoteSmartJS API Frontend Tests", function () {
       })
     });
     it("GET SIG().endorsement", function (done) {
-      var query = { sig_id: 1435 };
+      var query = { sig__sig_id: 1435 };
       votesmart.SIG().endorsement(query, function (err, res) {
         if (err) { throw err; }
         done();
@@ -192,7 +192,7 @@ describe("VoteSmartJS API Frontend Tests", function () {
 
   describe("State Module Tests", function () {
     it("GET State().state", function (done) {
-      var query = { };
+      var query = { state_id: "PA" };
       votesmart.State().state(query, function (err, res) {
         if (err) { throw err; }
         done();
@@ -239,14 +239,16 @@ describe("VoteSmartJS API Frontend Tests", function () {
 
   describe("Finance Module Tests", function () {
     it("GET Finance().finance", function (done) {
-      var query = { };
+      this.timeout(10000);
+      var query = { politician__politician_id: 9490 };
       votesmart.Finance().finance(query, function (err, res) {
         if (err) { throw err; }
         done();
       })
     });
     it("GET Finance().aggregate", function (done) {
-      var query = { };
+      this.timeout(10000);
+      var query = { politician__politician_id: 9490 };
       votesmart.Finance().aggregate(query, function (err, res) {
         if (err) { throw err; }
         done();
