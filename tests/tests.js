@@ -249,4 +249,15 @@ describe("VoteSmartJS API Tests", function () {
     });
   });
 
+  describe("Locaton Module Tests", function () {
+    it("GET Location().location", function (done) {
+      this.timeout(10000);
+      var query = { lat: 46.332505999999995, long: -113.2944165 };
+      votesmart.Location().location(query, function (err, res) {
+        if (err) { throw err; }
+        done();
+      })
+    });
+  });
+
 });
